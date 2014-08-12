@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Shopgo_CIS>
+            <version>1.0.0</version>
+        </Shopgo_CIS>
+    </modules>
+    <global>
+        <currency>
+            <import>
+                <services>
+                    <yahoofinance>
+                        <name>Yahoo Finance</name>
+                        <model>Shopgo_CIS_Model_Currency_Import_Yahoofinance</model>
+                    </yahoofinance>
+                    <googlefinance>
+                        <name>Google Finance</name>
+                        <model>Shopgo_CIS_Model_Currency_Import_Googlefinance</model>
+                    </googlefinance>
+                </services>
+            </import>
+        </currency>
+    </global>
+    <default>
+        <currency>
+            <yahoo_finance>
+                <delay>1</delay>
+            </yahoo_finance>
+            <google_finance>
+                <timeout>100</timeout>
+                <delay>1</delay>
+            </google_finance>
+        </currency>
+    </default>
+</config>
+
