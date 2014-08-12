@@ -11,7 +11,7 @@ class Shopgo_CIS_Model_Currency_Import_Yahoofinance extends Mage_Directory_Model
         $url = str_replace('{{CURRENCY_TO}}', $currencyTo, $url);
 
         try {
-            sleep(Mage::getStoreConfig('currency/yahoo_finance/delay')); // Be nice to Yahoo, they don't have a lot of hi-spec servers!
+            sleep(Mage::getStoreConfig('currency/yahoo_finance/delay'));
 
             $handle = fopen($url, "r");
 
@@ -24,7 +24,7 @@ class Shopgo_CIS_Model_Currency_Import_Yahoofinance extends Mage_Directory_Model
                 return null;
             }
 
-            return (float) $exchangeRate * 1.0; // Change 1.0 to influence rate
+            return (float) $exchangeRate * 1.0;
         } catch (Exception $e) {
             if($retry == 0) {
                 $this->_convert($currencyFrom, $currencyTo, 1);
