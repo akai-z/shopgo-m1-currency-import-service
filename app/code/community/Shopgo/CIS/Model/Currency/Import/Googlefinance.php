@@ -34,7 +34,7 @@ class Shopgo_CIS_Model_Currency_Import_Googlefinance extends Mage_Directory_Mode
             $data = explode('bld>', $response);
             $data = explode($currencyTo, $data[1]);
 
-            $exchangeRate = 0;
+            $exchangeRate = 1;
 
             if(empty($data[0])) {
                 $this->_messages[] = Mage::helper('directory')->__('Cannot retrieve rate from %s', $url);
