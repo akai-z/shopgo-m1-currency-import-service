@@ -1,5 +1,5 @@
 {
-    "name": "shopgo/cis",
+    "name": "shopgo/currency-import-service",
     "type": "magento-module",
     "license": [
         "OSL-3.0",
