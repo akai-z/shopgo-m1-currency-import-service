@@ -1,4 +1,4 @@
-# ShopGo Currency Import Service #
+# ShopGo Currency Import Service `[UNMAINTAINED]` #
 
 ### About Repository ###
 
